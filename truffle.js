@@ -1,7 +1,7 @@
 module.exports = {
   rpc: {
     host: "localhost",
-    port: 30311
+    port: 8545
   },
   networks: {
 
@@ -14,7 +14,7 @@ module.exports = {
       host: "localhost",
       port: 30311,
       network_id: "*", // Match any network id
-      gas : 4712388,
+      gas : 7900000,
       from : "0x34B1BCB29f604C377359938aFb54DD038297C10e"
     },
     main : {
