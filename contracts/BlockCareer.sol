@@ -418,13 +418,13 @@ contract BlockCareerCrowdsale is Crowdsale, Ownable {
 
   function claimMarketingTokens(address _to, uint256 _amount) payable onlyOwner {
     if (_amount > marketingSupply - usedMarketingSupply) revert();
-    natcoinTokenContract.mint(_to, _amount);
+    blockcareerTokenContract.mint(_to, _amount);
     marketingSupply += _amount;
   }
 
   function claimAdministrativeTokens(address _to, uint256 _amount) payable onlyOwner {
     if (_amount > administrativeSupply - usedAdministrativeSupply) revert();
-    natcoinTokenContract.mint(_to, _amount);
+    blockcareerTokenContract.mint(_to, _amount);
     administrativeSupply += _amount;
   }
 
