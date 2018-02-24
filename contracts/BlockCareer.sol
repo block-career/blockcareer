@@ -376,7 +376,7 @@ contract BlockCareerCrowdsale is Crowdsale, Ownable {
   uint256 public usedMarketingSupply;
   uint256 public usedReserveSupply;
 
-  function getPlatformSupply() public returns(uint256) { return PlatformSupply; }
+  function getPlatformSupply() public returns(uint256) { return platformSupply; }
   function getITSupply() public returns(uint256) { return ITSupply; }
   function getAdministrativeSupply() public returns(uint256) { return administrativeSupply; }
   function getMarketingSupply() public returns(uint256) { return marketingSupply; }
