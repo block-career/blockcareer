@@ -36,10 +36,10 @@
       "type": "constructor"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506102058061005e6000396000f30060606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680638da5cb5b14610051578063f2fde38b146100a6575b600080fd5b341561005c57600080fd5b6100646100df565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156100b157600080fd5b6100dd600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610104565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561015f57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415156101d657806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b505600a165627a7a72305820b6d4086004c97a2e66ef665abf65df185fd8197c80cd0a080ff5331ed4ea3e540029",
-  "deployedBytecode": "0x60606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680638da5cb5b14610051578063f2fde38b146100a6575b600080fd5b341561005c57600080fd5b6100646100df565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156100b157600080fd5b6100dd600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610104565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561015f57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415156101d657806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b505600a165627a7a72305820b6d4086004c97a2e66ef665abf65df185fd8197c80cd0a080ff5331ed4ea3e540029",
-  "sourceMap": "5836:736:0:-;;;5999:48;;;;;;;;6032:10;6024:5;;:18;;;;;;;;;;;;;;;;;;5836:736;;;;;;",
-  "deployedSourceMap": "5836:736:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5857:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6445:124;;;;;;;;;;;;;;;;;;;;;;;;;;;;5857:20;;;;;;;;;;;;;:::o;6445:124::-;6242:5;;;;;;;;;;;6228:19;;:10;:19;;;;6224:48;;;6257:8;;;6224:48;6530:1;6510:22;;:8;:22;;;;6506:59;;;6550:8;6542:5;;:16;;;;;;;;;;;;;;;;;;6506:59;6445:124;:::o",
+  "bytecode": "0x6060604052341561000f57600080fd5b60008054600160a060020a033316600160a060020a031990911617905561011e8061003b6000396000f300606060405263ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b81146045578063f2fde38b14607157600080fd5b3415604f57600080fd5b6055608f565b604051600160a060020a03909116815260200160405180910390f35b3415607b57600080fd5b608d600160a060020a0360043516609e565b005b600054600160a060020a031681565b60005433600160a060020a0390811691161460b857600080fd5b600160a060020a0381161560ef576000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0383161790555b505600a165627a7a723058207fef67253f0f9833dcc9f6c4c3722c032f7f5ca5cd753b772622d7e77fbb40730029",
+  "deployedBytecode": "0x606060405263ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b81146045578063f2fde38b14607157600080fd5b3415604f57600080fd5b6055608f565b604051600160a060020a03909116815260200160405180910390f35b3415607b57600080fd5b608d600160a060020a0360043516609e565b005b600054600160a060020a031681565b60005433600160a060020a0390811691161460b857600080fd5b600160a060020a0381161560ef576000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0383161790555b505600a165627a7a723058207fef67253f0f9833dcc9f6c4c3722c032f7f5ca5cd753b772622d7e77fbb40730029",
+  "sourceMap": "5836:736:0:-;;;5999:48;;;;;;;;6024:5;:18;;-1:-1:-1;;;;;6032:10:0;6024:18;-1:-1:-1;;;;;;6024:18:0;;;;;;5836:736;;;;;;",
+  "deployedSourceMap": "5836:736:0:-;;;;;;;;;;;;;;;;;;;;;;5857:20;;;;;;;;;;;;;;;-1:-1:-1;;;;;5857:20:0;;;;;;;;;;;;;;6445:124;;;;;;;;;;-1:-1:-1;;;;;6445:124:0;;;;;;;5857:20;;;-1:-1:-1;;;;;5857:20:0;;:::o;6445:124::-;6242:5;;6228:10;-1:-1:-1;;;;;6228:19:0;;;6242:5;;6228:19;6224:48;;6257:8;;;6224:48;-1:-1:-1;;;;;6510:22:0;;;6506:59;;6542:5;:16;;-1:-1:-1;;6542:16:0;-1:-1:-1;;;;;6542:16:0;;;;;6506:59;6445:124;:::o",
   "source": "pragma solidity ^0.4.11;\n\n/**\n * @title SafeMath\n * @dev Math operations with safety checks that throw on error\n */\nlibrary SafeMath {\n  function mul(uint256 a, uint256 b) internal constant returns (uint256) {\n    uint256 c = a * b;\n    assert(a == 0 || c / a == b);\n    return c;\n  }\n\n  function div(uint256 a, uint256 b) internal constant returns (uint256) {\n    // assert(b > 0); // Solidity automatically throws when dividing by 0\n    uint256 c = a / b;\n    // assert(a == b * c + a % b); // There is no case in which this doesn't hold\n    return c;\n  }\n\n  function sub(uint256 a, uint256 b) internal constant returns (uint256) {\n    assert(b <= a);\n    return a - b;\n  }\n\n  function add(uint256 a, uint256 b) internal constant returns (uint256) {\n    uint256 c = a + b;\n    assert(c >= a);\n    return c;\n  }\n}\n/**\n * @title ERC20 interface\n * @dev see https://github.com/ethereum/EIPs/issues/20\n */\ncontract ERC20 {\n  uint256 _totalSupply;\n  function totalSupply() constant returns (uint256 totalSupply);\n  function balanceOf(address _owner) constant returns (uint balance);\n  function transfer(address _to, uint _value) returns (bool success);\n  function transferFrom(address _from, address _to, uint _value) returns (bool success);\n  function approve(address _spender, uint _value) returns (bool success);\n  function allowance(address _owner, address _spender) constant returns (uint remaining);\n  event Transfer(address indexed _from, address indexed _to, uint _value);\n  event Approval(address indexed _owner, address indexed _spender, uint _value);\n}\n\n/**\n * @title Basic token\n * @dev Basic version of StandardToken, with no allowances.\n */\ncontract BasicToken is ERC20 {\n  using SafeMath for uint256;\n\n  mapping(address => uint256) balances;\n\n  // Owner of account approves the transfer of an amount to another account\n  mapping(address => mapping (address => uint256)) allowed;\n\n  /**\n  * @dev transfer token for a specified address\n  * @param _to The address to transfer to.\n  * @param _value The amount to be transferred.\n  */\n  function transfer(address _to, uint256 _value) returns (bool success) {\n    if (balances[msg.sender] >= _value\n    && _value > 0\n    && balances[_to] + _value > balances[_to]) {\n      balances[msg.sender] -= _value;\n      balances[_to] += _value;\n      Transfer(msg.sender, _to, _value);\n      return true;\n    } else {\n      return false;\n    }\n  }\n\n  // Send _value amount of tokens from address _from to address _to\n  // The transferFrom method is used for a withdraw workflow, allowing contracts to send\n  // tokens on your behalf, for example to \"deposit\" to a contract address and/or to charge\n  // fees in sub-currencies; the command should fail unless the _from account has\n  // deliberately authorized the sender of the message via some mechanism; we propose\n  // these standardized APIs for approval:\n  function transferFrom(address _from,address _to, uint256 _amount) returns (bool success) {\n    if (balances[_from] >= _amount\n    && allowed[_from][msg.sender] >= _amount\n    && _amount > 0\n    && balances[_to] + _amount > balances[_to]) {\n      balances[_from] -= _amount;\n      allowed[_from][msg.sender] -= _amount;\n      balances[_to] += _amount;\n      return true;\n    } else {\n      return false;\n    }\n  }\n\n  /**\n  * @dev Gets the balance of the specified address.\n  * @param _owner The address to query the the balance of.\n  * @return An uint256 representing the amount owned by the passed address.\n  */\n  function balanceOf(address _owner) constant returns (uint256 balance) {\n    return balances[_owner];\n  }\n\n  function totalSupply() constant returns (uint256 totalSupply) {\n    totalSupply = _totalSupply;\n  }\n\n}\n\n\n/**\n * @title Standard ERC20 token\n *\n * @dev Implementation of the basic standard token.\n * @dev https://github.com/ethereum/EIPs/issues/20\n * @dev Based on code by FirstBlood: https://github.com/Firstbloodio/token/blob/master/smart_contract/FirstBloodToken.sol\n */\ncontract StandardToken is ERC20, BasicToken {\n\n  mapping (address => mapping (address => uint256)) allowed;\n\n\n  /**\n   * @dev Transfer tokens from one address to another\n   * @param _from address The address which you want to send tokens from\n   * @param _to address The address which you want to transfer to\n   * @param _value uint256 the amout of tokens to be transfered\n   */\n  function transferFrom(address _from, address _to, uint256 _value) returns (bool) {\n    var _allowance = allowed[_from][msg.sender];\n\n    // Check is not needed because sub(_allowance, _value) will already throw if this condition is not met\n    // require (_value <= _allowance);\n\n    balances[_to] = balances[_to].add(_value);\n    balances[_from] = balances[_from].sub(_value);\n    allowed[_from][msg.sender] = _allowance.sub(_value);\n    Transfer(_from, _to, _value);\n    return true;\n  }\n\n  /**\n   * @dev Aprove the passed address to spend the specified amount of tokens on behalf of msg.sender.\n   * @param _spender The address which will spend the funds.\n   * @param _value The amount of tokens to be spent.\n   */\n  function approve(address _spender, uint256 _value) returns (bool success) {\n    allowed[msg.sender][_spender] = _value;\n    return true;\n  }\n\n  /**\n   * @dev Function to check the amount of tokens that an owner allowed to a spender.\n   * @param _owner address The address which owns the funds.\n   * @param _spender address The address which will spend the funds.\n   * @return A uint256 specifing the amount of tokens still avaible for the spender.\n   */\n  function allowance(address _owner, address _spender) constant returns (uint256 remaining) {\n    return allowed[_owner][_spender];\n  }\n\n}\n\n/**\n * @title Ownable\n * @dev The Ownable contract has an owner address, and provides basic authorization control\n * functions, this simplifies the implementation of \"user permissions\".\n */\ncontract Ownable {\n  address public owner;\n\n\n  /**\n   * @dev The Ownable constructor sets the original `owner` of the contract to the sender\n   * account.\n   */\n  function Ownable() {\n    owner = msg.sender;\n  }\n\n\n  /**\n   * @dev Throws if called by any account other than the owner.\n   */\n  // Functions with this modifier can only be executed by the owner\n\n  modifier onlyOwner() {\n    if (msg.sender != owner) {\n      revert();\n    }\n    _;\n  }\n\n\n  /**\n   * @dev Allows the current owner to transfer control of the contract to a newOwner.\n   * @param newOwner The address to transfer ownership to.\n   */\n  function transferOwnership(address newOwner) onlyOwner {\n    if (newOwner != address(0)) {\n      owner = newOwner;\n    }\n  }\n\n}\n\n\n\n/**\n * @title Mintable token\n * @dev Simple ERC20 Token example, with mintable token creation\n * @dev Issue: * https://github.com/OpenZeppelin/zeppelin-solidity/issues/120\n * Based on code by TokenMarketNet: https://github.com/TokenMarketNet/ico/blob/master/contracts/MintableToken.sol\n */\n\ncontract MintableToken is StandardToken, Ownable {\n  event Mint(address indexed to, uint256 amount);\n  event MintFinished();\n\n  bool public mintingFinished = false;\n\n\n  modifier canMint() {\n    require(!mintingFinished);\n    _;\n  }\n\n  /**\n   * @dev Function to mint tokens\n   * @param _to The address that will recieve the minted tokens.\n   * @param _amount The amount of tokens to mint.\n   * @return A boolean that indicates if the operation was successful.\n   */\n  function mint(address _to, uint256 _amount) onlyOwner canMint returns (bool) {\n    _totalSupply = _totalSupply.add(_amount);\n    balances[_to] = balances[_to].add(_amount);\n    Mint(_to, _amount);\n    return true;\n  }\n\n  /**\n   * @dev Function to stop minting new tokens.\n   * @return True if the operation was successful.\n   */\n  function finishMinting() onlyOwner returns (bool) {\n    mintingFinished = true;\n    MintFinished();\n    return true;\n  }\n}\n\ncontract BlockCareer is MintableToken {\n  string public constant name = \"BLOCKCAREER\";\n  string public constant symbol = \"BCR\";\n  uint256 public constant decimals = 18;\n}\n\n/**\n * @title Crowdsale\n * @dev Crowdsale is a base contract for managing a token crowdsale.\n * Crowdsales have a start an d end block, where investors can make\n * token purchases and the crowdsale will assign them tokens based\n * on a token per ETH rate. Funds collected are forwarded to a wallet\n * as they arrive.\n */\ncontract Crowdsale {\n  using SafeMath for uint256;\n\n  // The token being sold\n  MintableToken public token;\n\n  // start and end block where investments are allowed (both inclusive)\n  uint256 public startBlock;\n  uint256 public endBlock;\n\n  // address where funds are collected\n  address public wallet;\n\n  // how many token units a buyer gets per wei\n  uint256 public rate;\n\n  // amount of raised money in wei\n  uint256 public weiRaised;\n\n  /**\n   * event for token purchase logging\n   * @param purchaser who paid for the tokens\n   * @param beneficiary who got the tokens\n   * @param value weis paid for purchase\n   * @param amount amount of tokens purchased\n   */\n  event TokenPurchase(address indexed purchaser, address indexed beneficiary, uint256 value, uint256 amount);\n\n\n  function Crowdsale(uint256 _startBlock, uint256 _endBlock, uint256 _rate, address _wallet) {\n    require(_startBlock >= block.number);\n    require(_endBlock >= _startBlock);\n    require(_rate > 0);\n    require(_wallet != 0x0);\n\n    token = createTokenContract();\n    startBlock = _startBlock;\n    endBlock = _endBlock;\n    rate = _rate;\n    wallet = _wallet;\n  }\n\n  // creates the token to be sold.\n  // override this method to have crowdsale of a specific mintable token.\n  function createTokenContract() internal returns (MintableToken) {\n    return new MintableToken();\n  }\n\n\n  // fallback function can be used to buy tokens\n  function () payable {\n    buyTokens(msg.sender);\n  }\n\n  // low level token purchase function\n  function buyTokens(address beneficiary) payable {\n    require(beneficiary != 0x0);\n    require(validPurchase());\n\n    uint256 weiAmount = msg.value;\n\n    // calculate token amount to be created\n    uint256 tokens = weiAmount.mul(rate);\n\n    // update state\n    weiRaised = weiRaised.add(weiAmount);\n\n    token.mint(beneficiary, tokens);\n    TokenPurchase(msg.sender, beneficiary, weiAmount, tokens);\n\n    forwardFunds();\n  }\n\n  // send ether to the fund collection wallet\n  // override to create custom fund forwarding mechanisms\n  function forwardFunds() internal {\n    wallet.transfer(msg.value);\n  }\n\n  // @return true if the transaction can buy tokens\n  function validPurchase() internal constant returns (bool) {\n    uint256 current = block.number;\n    bool withinPeriod = current >= startBlock && current <= endBlock;\n    bool nonZeroPurchase = msg.value != 0;\n    return withinPeriod && nonZeroPurchase;\n  }\n\n  // @return true if crowdsale event has ended\n  function hasEnded() public constant returns (bool) {\n    return block.number > endBlock;\n  }\n\n\n}\n\n\ncontract BlockCareerCrowdsale is Crowdsale, Ownable {\n\n  uint256 public platformSupply;\n  uint256 public ITSupply;\n  uint256 public administrativeSupply;\n  uint256 public marketingSupply;\n  uint256 public reserveSupply;\n\n  uint256 public usedPlatformSupply;\n  uint256 public usedITSupply;\n  uint256 public usedAdministrativeSupply;\n  uint256 public usedMarketingSupply;\n  uint256 public usedReserveSupply;\n\n  function getPlatformSupply() public returns(uint256) { return platformSupply; }\n  function getITSupply() public returns(uint256) { return ITSupply; }\n  function getAdministrativeSupply() public returns(uint256) { return administrativeSupply; }\n  function getMarketingSupply() public returns(uint256) { return marketingSupply; }\n  function getReserveSupply() public returns(uint256) { return reserveSupply; }\n\n  function getUsedPlatformSupply() public returns(uint256) { return usedPlatformSupply; }\n  function getUsedITSupply() public returns(uint256) { return usedITSupply; }\n  function getUsedAdministrativeSupply() public returns(uint256) { return usedAdministrativeSupply; }\n  function getUsedMarketingSupply() public returns(uint256) { return usedMarketingSupply; }\n  function getUsedReserveSupply() public returns(uint256) { return usedReserveSupply; }\n\n  BlockCareer blockcareerTokenContract;\n\n  function BlockCareerCrowdsale(uint256 _startBlock, uint256 _endBlock, uint256 _rate, address _wallet) Crowdsale(_startBlock, _endBlock, _rate, _wallet) {\n    platformSupply =        7500000 * 10**17;\n    ITSupply =              5000000 * 10**17;\n    administrativeSupply =  4500000 * 10**17;\n    marketingSupply =       5000000 * 10**17;\n    reserveSupply =         3000000 * 10**17;\n  }\n\n  // creates the token to be sold.\n  // override this method to have crowdsale of a specific MintableToken token.\n  function createTokenContract() internal returns (MintableToken) {\n    return new BlockCareer();\n  }\n\n  function claimReservedTokens(address _to, uint256 _amount) payable onlyOwner {\n    if (_amount > reserveSupply - usedReserveSupply) revert();\n    token.mint(_to, _amount);\n    reserveSupply += _amount;\n  }\n\n  function claimITTokens(address _to, uint256 _amount) payable onlyOwner {\n    if (_amount > ITSupply - usedITSupply) revert();\n    token.mint(_to, _amount);\n    ITSupply += _amount;\n  }\n\n  function claimMarketingTokens(address _to, uint256 _amount) payable onlyOwner {\n    if (_amount > marketingSupply - usedMarketingSupply) revert();\n    blockcareerTokenContract.mint(_to, _amount);\n    marketingSupply += _amount;\n  }\n\n  function claimAdministrativeTokens(address _to, uint256 _amount) payable onlyOwner {\n    if (_amount > administrativeSupply - usedAdministrativeSupply) revert();\n    blockcareerTokenContract.mint(_to, _amount);\n    administrativeSupply += _amount;\n  }\n\n}\n",
   "sourcePath": "/home/ubuntu/coinDeploy/blockcareer/contracts/BlockCareerCrowdsale.sol",
   "ast": {
@@ -331,7 +331,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1139,
+                              "referencedDeclaration": 1156,
                               "type": "function (bool) pure",
                               "value": "assert"
                             },
@@ -904,7 +904,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1139,
+                              "referencedDeclaration": 1156,
                               "type": "function (bool) pure",
                               "value": "assert"
                             },
@@ -1262,7 +1262,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1139,
+                              "referencedDeclaration": 1156,
                               "type": "function (bool) pure",
                               "value": "assert"
                             },
@@ -2624,7 +2624,7 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 1148,
+                                              "referencedDeclaration": 1139,
                                               "type": "msg",
                                               "value": "msg"
                                             },
@@ -2919,7 +2919,7 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 1148,
+                                              "referencedDeclaration": 1139,
                                               "type": "msg",
                                               "value": "msg"
                                             },
@@ -3103,7 +3103,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 1148,
+                                          "referencedDeclaration": 1139,
                                           "type": "msg",
                                           "value": "msg"
                                         },
@@ -3581,7 +3581,7 @@
                                                   "overloadedDeclarations": [
                                                     null
                                                   ],
-                                                  "referencedDeclaration": 1148,
+                                                  "referencedDeclaration": 1139,
                                                   "type": "msg",
                                                   "value": "msg"
                                                 },
@@ -3990,7 +3990,7 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 1148,
+                                              "referencedDeclaration": 1139,
                                               "type": "msg",
                                               "value": "msg"
                                             },
@@ -4827,7 +4827,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1148,
+                                  "referencedDeclaration": 1139,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -5264,7 +5264,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 1148,
+                                      "referencedDeclaration": 1139,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -5670,7 +5670,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 1148,
+                                          "referencedDeclaration": 1139,
                                           "type": "msg",
                                           "value": "msg"
                                         },
@@ -6104,7 +6104,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1148,
+                                  "referencedDeclaration": 1139,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -6194,7 +6194,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1148,
+                                  "referencedDeclaration": 1139,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -6256,7 +6256,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 1152,
+                                      "referencedDeclaration": 1158,
                                       "type": "function () pure",
                                       "value": "revert"
                                     },
@@ -6560,10 +6560,10 @@
       {
         "attributes": {
           "contractDependencies": [
-            163,
-            326,
             436,
-            480
+            480,
+            163,
+            326
           ],
           "contractKind": "contract",
           "documentation": "@title Mintable token\n@dev Simple ERC20 Token example, with mintable token creation\n@dev Issue: * https://github.com/OpenZeppelin/zeppelin-solidity/issues/120\nBased on code by TokenMarketNet: https://github.com/TokenMarketNet/ico/blob/master/contracts/MintableToken.sol",
@@ -6808,7 +6808,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1151,
+                              "referencedDeclaration": 1157,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -7648,10 +7648,10 @@
       {
         "attributes": {
           "contractDependencies": [
-            163,
-            326,
             436,
             480,
+            163,
+            326,
             561
           ],
           "contractKind": "contract",
@@ -8320,7 +8320,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1151,
+                              "referencedDeclaration": 1157,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -8375,7 +8375,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 1140,
+                                      "referencedDeclaration": 1138,
                                       "type": "block",
                                       "value": "block"
                                     },
@@ -8431,7 +8431,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1151,
+                              "referencedDeclaration": 1157,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -8525,7 +8525,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1151,
+                              "referencedDeclaration": 1157,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -8622,7 +8622,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1151,
+                              "referencedDeclaration": 1157,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -9210,7 +9210,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1148,
+                                  "referencedDeclaration": 1139,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -9333,7 +9333,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1151,
+                              "referencedDeclaration": 1157,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -9430,7 +9430,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1151,
+                              "referencedDeclaration": 1157,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -9538,7 +9538,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1148,
+                              "referencedDeclaration": 1139,
                               "type": "msg",
                               "value": "msg"
                             },
@@ -9932,7 +9932,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1148,
+                                  "referencedDeclaration": 1139,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -10164,7 +10164,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1148,
+                                  "referencedDeclaration": 1139,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -10310,7 +10310,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1140,
+                              "referencedDeclaration": 1138,
                               "type": "block",
                               "value": "block"
                             },
@@ -10548,7 +10548,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1148,
+                                  "referencedDeclaration": 1139,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -10756,7 +10756,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1140,
+                                  "referencedDeclaration": 1138,
                                   "type": "block",
                                   "value": "block"
                                 },
@@ -13346,7 +13346,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1152,
+                                  "referencedDeclaration": 1158,
                                   "type": "function () pure",
                                   "value": "revert"
                                 },
@@ -13751,7 +13751,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1152,
+                                  "referencedDeclaration": 1158,
                                   "type": "function () pure",
                                   "value": "revert"
                                 },
@@ -14156,7 +14156,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1152,
+                                  "referencedDeclaration": 1158,
                                   "type": "function () pure",
                                   "value": "revert"
                                 },
@@ -14561,7 +14561,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1152,
+                                  "referencedDeclaration": 1158,
                                   "type": "function () pure",
                                   "value": "revert"
                                 },
@@ -14750,11 +14750,7 @@
     "name": "SourceUnit",
     "src": "0:13656:0"
   },
-  "compiler": {
-    "name": "solc",
-    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
-  },
   "networks": {},
-  "schemaVersion": "1.0.1",
-  "updatedAt": "2018-02-24T18:54:58.730Z"
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2018-02-25T09:17:27.920Z"
 }

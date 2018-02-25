@@ -1,7 +1,13 @@
 module.exports = {
   rpc: {
-    host: "localhost",
-    port: 8545
+    host: "54.254.211.103",
+    port: 30311
+  },
+  solc: {
+    optimizer: {
+      enabled: true,
+      runs: 200
+    }
   },
   networks: {
 
@@ -11,10 +17,10 @@ module.exports = {
       network_id: "*" // Match any network id
     },
     live: {
-      host: "localhost",
+      host: "54.254.211.103",
       port: 30311,
       network_id: "*", // Match any network id
-      gas : 7900000,
+      gas : 4700000,
       from : "0x34B1BCB29f604C377359938aFb54DD038297C10e"
     },
     main : {
